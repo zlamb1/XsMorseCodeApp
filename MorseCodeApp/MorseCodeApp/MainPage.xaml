@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MorseCodeApp.MainPage">
+    <StackLayout>
+        <Grid 
+		    BackgroundColor="Red"
+		    RowSpacing="0"
+		    ColumnSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+	        <Button Clicked="OnClickPeriod" ClassId="0">
+		        <Grid.Row>0</Grid.Row>
+		        <Grid.Column>0</Grid.Column>
+		        <Button.FontSize>48</Button.FontSize>
+		        <Button.Text>.</Button.Text>
+                <Button.BackgroundColor>White</Button.BackgroundColor>
+	        </Button>
+	        <Button Clicked="OnClickDash" ClassId="0">
+		        <Grid.Row>0</Grid.Row>
+		        <Grid.Column>1</Grid.Column>
+		        <Button.FontSize>48</Button.FontSize>
+		        <Button.Text>-</Button.Text>
+                <Button.BackgroundColor>White</Button.BackgroundColor>
+	        </Button>
+	        <Button Clicked="OnClickSpace" ClassId="0">
+		        <Grid.Row>1</Grid.Row>
+		        <Grid.Column>0</Grid.Column>
+		        <Grid.ColumnSpan>2</Grid.ColumnSpan>
+		        <Button.FontSize>32</Button.FontSize>
+		        <Button.Text>SPACE</Button.Text>
+                <Button.BackgroundColor>White</Button.BackgroundColor>
+	        </Button>
+        </Grid>
+        <StackLayout x:Name="StackLayoutOutput1" HorizontalOptions="Center">
+		    <Label x:Name="LabelMorseOutput1">
+			    <Label.FontSize>36</Label.FontSize>
+		    </Label>
+		    <Label x:Name="LabelWordOutput1">
+				<Label.FontSize>36</Label.FontSize>
+		    </Label>
+		    <Button ClassId="0" Clicked="ClearWord">
+                <Button.Text>CLEAR</Button.Text>
+            </Button>
+	    </StackLayout>
+        <StackLayout x:Name="StackLayoutOutput2" HorizontalOptions="Center">
+		    <Button ClassId="1" Clicked="ClearWord">
+			    <Button.Text>CLEAR</Button.Text>
+		    </Button>
+		    <Label x:Name="LabelMorseOutput2">
+			    <Label.FontSize>36</Label.FontSize>
+		    </Label>
+		    <Label x:Name="LabelWordOutput2">
+			    <Label.FontSize>36</Label.FontSize>
+		    </Label>
+	    </StackLayout>
+        <StackLayout>
+	        <Grid 
+		        BackgroundColor="Red"
+		        RowSpacing="0"
+		        ColumnSpacing="0">
+		        <Grid.RowDefinitions>
+			        <RowDefinition Height="*" />
+			        <RowDefinition Height="*" />
+		        </Grid.RowDefinitions>
+		        <Grid.ColumnDefinitions>
+			        <ColumnDefinition />
+			        <ColumnDefinition />
+		        </Grid.ColumnDefinitions>
+                <Button Clicked="OnClickPeriod" ClassId="1">
+			        <Grid.Row>0</Grid.Row>
+			        <Grid.Column>0</Grid.Column>
+			        <Button.FontSize>48</Button.FontSize>
+			        <Button.Text>.</Button.Text>
+                    <Button.BackgroundColor>White</Button.BackgroundColor>
+		        </Button>
+                <Button Clicked="OnClickDash" ClassId="1">
+			        <Grid.Row>0</Grid.Row>
+			        <Grid.Column>1</Grid.Column>
+			        <Button.FontSize>48</Button.FontSize>
+			        <Button.Text>-</Button.Text>
+                    <Button.BackgroundColor>White</Button.BackgroundColor>
+                </Button>
+                <Button Clicked="OnClickSpace" ClassId="1">
+			        <Grid.Row>1</Grid.Row>
+			        <Grid.Column>0</Grid.Column>
+			        <Grid.ColumnSpan>2</Grid.ColumnSpan>
+			        <Button.FontSize>32</Button.FontSize>
+			        <Button.Text>SPACE</Button.Text>
+                    <Button.BackgroundColor>White</Button.BackgroundColor>
+		        </Button>
+	        </Grid>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
